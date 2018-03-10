@@ -12,7 +12,7 @@ Latest version of Xcode (mandatory for Apple frameworks). You can install it fro
         - css files (.css)
       - images (.jpg)
 
- Caution: Please DO NOT change the score record file, or program may crash! If you accidentially
+ Caution: Please DO NOT change the score record file, or program may crash! If you accidentally
  changed it, please just delete this file.
 
 2. Get dependent package
