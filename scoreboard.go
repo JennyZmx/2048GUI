@@ -1,6 +1,3 @@
-//This is a joint work of Mengxin ZHANG and Jiachen Liu
-//The HTML part is written by Jiachen Liu and the remaining is finished by Mengxin ZHANG
-
 package main
 
 import (
