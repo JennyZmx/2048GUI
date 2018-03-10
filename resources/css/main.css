@@ -1,0 +1,587 @@
+/*--This is Jiachen Liu's work--*/
+
+* {
+  box-sizing: border-box;
+}
+
+/*set font family*/
+body {
+  font-family: Arial Rounded MT bold;
+}
+
+/*property for table*/
+table, tr, td  {
+  font-size: 20px;
+  font-weight: 450;
+  border: 0px;
+  border-collapse: collapse;
+  text-align:left;
+}
+
+/*position of the table*/
+table {
+  position: fixed;
+  left: 40px;
+  top: 73px;
+}
+
+/*set line height*/
+tr {
+  height:34px;
+}
+
+/*header in the main page (2048)*/
+.MainHeader {
+  font-size: 85px;
+  font-weight: 900;
+  left: 60px;
+  top: 30px;
+  position: fixed;
+  color: #756E66;
+}
+
+/*title for scores*/
+.scoretitle {
+  width:160px;
+  height:40px;
+  text-align: center;
+  background-color: #8C7268;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding-top: 8px;
+  color: #F9F6F3;
+  font-size: 22px;
+  font-weight: 450;
+  position: fixed;
+  left: 83px;
+}
+
+/*set score title position*/
+.main1{
+  top: 163px;
+}
+
+/*set score title position*/
+.main2 {
+  top: 277px;
+}
+
+/*paragraph in the main page*/
+.MainP {
+  color: #756E66;
+  font-size: 23px;
+  font-weight: 100;
+  text-align: center;
+  position: fixed;
+  left: 310px;
+  top: 58px;
+}
+
+/*The big background for the gameboard*/
+.boardbackground {
+  background-color: #B9ADA1;
+  border-radius: 13px;
+  position: fixed;
+  left: 324px;
+  top: 114px;
+  width: 436px;
+  height: 436px;
+}
+
+/*display of score in main page*/
+.MainScore {
+  width:160px;
+  height:40px;
+  text-align: center;
+  background-color: #B9ADA1;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding-top: 6px;
+  color:	#FFFFFF;
+  font-size: 22px;
+  font-weight: 450;
+  position: fixed;
+  left: 83px;
+  outline: none;
+  border: none;
+}
+
+/*set the position of current score in main page*/
+.MainCurrentScore {
+  top: 203px;
+}
+
+/*set the position of best score in main page*/
+.MainBestScore {
+  top: 317px;
+}
+
+/*common property for all cells*/
+.cell {
+  border-radius: 7px;
+  width: 96px;
+  height: 96px;
+  text-align: center;
+  font-weight: 700;
+  background-color: #CDC1B5;
+  position: fixed;
+}
+
+/*set cell position*/
+.cell11 {
+  top: 124px;
+  left: 334px;
+}
+
+/*set cell position*/
+.cell12 {
+  top: 124px;
+  left: 440px;
+}
+
+/*set cell position*/
+.cell13 {
+  top: 124px;
+  left: 546px;
+}
+
+/*set cell position*/
+.cell14 {
+  top: 124px;
+  left: 652px;
+}
+
+/*set cell position*/
+.cell21 {
+  top: 230px;
+  left: 334px;
+}
+
+/*set cell position*/
+.cell22 {
+  top: 230px;
+  left: 440px;
+}
+
+/*set cell position*/
+.cell23 {
+  top: 230px;
+  left: 546px;
+}
+
+/*set cell position*/
+.cell24 {
+  top: 230px;
+  left: 652px;
+}
+
+/*set cell position*/
+.cell31 {
+  top: 336px;
+  left: 334px;
+}
+
+/*set cell position*/
+.cell32 {
+  top: 336px;
+  left: 440px;
+}
+
+/*set cell position*/
+.cell33 {
+  top: 336px;
+  left: 546px;
+}
+
+/*set cell position*/
+.cell34 {
+  top: 336px;
+  left: 652px;
+}
+
+/*set cell position*/
+.cell41 {
+  top: 442px;
+  left: 334px;
+}
+
+/*set cell position*/
+.cell42 {
+  top: 442px;
+  left: 440px;
+}
+
+/*set cell position*/
+.cell43 {
+  top: 442px;
+  left: 546px;
+}
+
+/*set cell position*/
+.cell44 {
+  top: 442px;
+  left: 652px;
+}
+
+/*property of a real */
+.MainButton {
+  background-color: #8C7268;
+  width:160px;
+  height:40px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 450;
+  text-align: center;
+  color: #F9F6F3;
+  outline: none;
+  border: none;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.25s;
+  border-radius: 0px;
+  position: fixed;
+  left: 83px;
+}
+
+/*button become darker when being touched*/
+.MainButton:hover {
+  background-color: #654535;
+}
+
+/*animation of button being pressed*/
+.MainButton:active {
+  transform:translateY(1px);
+}
+
+/*set position for new game button*/
+.NewGame {
+  top: 390px;
+}
+
+/*common property for direction buttons*/
+.Direction {
+  width:50px;
+  position: fixed;
+}
+
+/*set position for direction button*/
+.UpButton {
+  font-size: 25px;
+  top: 460px;
+  left: 138px;
+  padding-left: 7px;
+  padding-bottom: 5px;
+}
+
+/*set position for direction button*/
+.DownButton {
+  font-size: 25px;
+  top: 505px;
+  left: 138px;
+  padding-left: 7px;
+  padding-bottom: 5px;
+}
+
+/*set position for direction button*/
+.LeftButton {
+  font-size: 28px;
+  top: 505px;
+  left: 79px;
+  padding-left: 7px;
+  padding-bottom: 6px;
+}
+
+/*set position for direction button*/
+.RightButton {
+  font-size: 22px;
+  top: 505px;
+  left: 197px;
+  padding-left: 7px;
+  padding-bottom: 2px;
+}
+
+/*cell with number 2*/
+.cell_2 {
+  background-color: #EFE4DA;
+  padding-top: 16px;
+  font-size: 52px;
+  color: #776E66;
+}
+
+/*cell with number 4*/
+.cell_4 {
+  background-color: #ECE0C8;
+  padding-top: 16px;
+  font-size: 52px;
+  color: #776E66;
+}
+
+/*cell with number 8*/
+.cell_8 {
+  background-color: #F1B179;
+  padding-top: 16px;
+  font-size: 52px;
+  color: #F9F6F3;
+}
+
+/*cell with number 16*/
+.cell_16 {
+  background-color: #F59563;
+  padding-top: 16px;
+  font-size: 52px;
+  color: #F9F6F3;
+}
+
+/*cell with number 32*/
+.cell_32 {
+  background-color: #F67C5F;
+  padding-top: 16px;
+  font-size: 52px;
+  color: #F9F6F3;
+}
+
+/*cell with number 64*/
+.cell_64 {
+  background-color: #F65E3A;
+  padding-top: 16px;
+  font-size: 52px;
+  color: #F9F6F3;
+}
+
+/*cell with number 128*/
+.cell_128 {
+  background-color: #EDCF72;
+  padding-top: 20px;
+  font-size: 44px;
+  color: #F9F6F3;
+}
+
+/*cell with number 256*/
+.cell_256 {
+  background-color: #EDCC62;
+  padding-top: 20px;
+  font-size: 44px;
+  color: #F9F6F3;
+}
+
+/*cell with number 512*/
+.cell_512 {
+  background-color: #ECC851;
+  padding-top: 20px;
+  font-size: 44px;
+  color: #F9F6F3;
+}
+
+/*cell with number 1024*/
+.cell_1024 {
+  background-color: #EDC540;
+  padding-top: 25px;
+  font-size: 36px;
+  color: #F9F6F3;
+}
+
+/*cell with number 2048*/
+.cell_2048 {
+  background-color: #EDC22F;
+  padding-top: 25px;
+  font-size: 36px;
+  color: #F9F6F3;
+}
+
+/*main title of score board*/
+.scoreboardheader {
+  font-size: 34px;
+  font-weight: 900;
+  color: #F9F6F3;
+  position:fixed;
+  left: 116px;
+  top: 20px;
+  user-select: none;
+}
+
+/*head line of the table*/
+.headline {
+  background-color: #8C7268;
+  color: #F9F6F3;
+}
+
+/*Set even line*/
+.evenline {
+  background-color: #EFE4DA;
+  color: #776E66;
+}
+
+/*set property for odd lines*/
+.oddline {
+  background-color: #ECE0C8;
+  color: #776E66;
+}
+
+/*set cell width*/
+.rank {
+  width: 120px;
+  padding-left: 7px;
+}
+
+/*set cell width*/
+.date {
+  width: 149px;
+}
+
+/*set cell width*/
+.score {
+  width: 149px;
+}
+
+/*set position of button*/
+.closescoreboard {
+  position: fixed;
+  left: 169px;
+  top: 330px;
+}
+
+/*main title of score board*/
+.Aboutheader {
+  font-size:36px;
+  font-weight: 900;
+  color: #776E66;
+  text-align: center;
+  position: fixed;
+  top: 30px;
+  left: 171px;
+}
+
+/*p in about*/
+.AboutP {
+  color: #776E66;
+  font-size: 20px;
+  position: fixed;
+  left: 19px;
+  top: 65px;
+  width: 440px;
+  font-weight: 430;
+  text-align: justify;
+}
+
+/*position of button in about*/
+.Aboutbutton {
+  position: fixed;
+  top: 247px;
+  left: 159px;
+}
+
+/*inserted win image*/
+.WinImage {
+  position: fixed;
+  left: 30px;
+  top: 5px;
+  width: 405px;
+  height: 420px;
+  background-image: url("../win.jpg");
+}
+
+/*Win header*/
+.Winheader {
+  font-size:36px;
+  font-weight: 900;
+  color: #F9F6F3;
+  position: fixed;
+  left: 52px;
+  top: 335px;
+}
+
+/*show score and best score in Win page*/
+.Winscore {
+  font-size: 28px;
+  font-weight: 500;
+  color: #F9F6F3;
+  text-align: center;
+  width: 170px;
+}
+
+/*Set position of the first one*/
+.Ws1 {
+  position: fixed;
+  left: 47px;
+  top: 380px;
+}
+
+/*Set position of the Second one*/
+.Ws2 {
+  position: fixed;
+  left: 250px;
+  top: 380px;
+}
+
+/*Set position of the first one*/
+.Wb1 {
+  position: fixed;
+  left: 52px;
+  top: 428px;
+}
+
+/*Set position of the first one*/
+.Wb2 {
+  position: fixed;
+  left: 245px;
+  top: 428px;
+}
+
+/*inserted loss image*/
+.LossImage {
+  position: fixed;
+  left: 69px;
+  top: 20px;
+  width: 300px;
+  height: 295px;
+  background-image: url("../loss.jpg");
+}
+
+/*Loss header*/
+.Lossheader {
+  font-size:36px;
+  font-weight: 900;
+  color: #F9F6F3;
+  position: fixed;
+  left: 36px;
+  top: 335px;
+}
+
+/*Set position of the first one*/
+.Ls1 {
+  position: fixed;
+  left: 25px;
+  top: 380px;
+}
+
+/*Set position of the Second one*/
+.Ls2 {
+  position: fixed;
+  left: 246px;
+  top: 380px;
+}
+
+/*Set different color*/
+.Lb {
+  background-color: #EFE4DA;
+  color: #776E66;
+}
+
+/*Set different color*/
+.Lb:hover {
+  background-color: #DCD0B8;
+}
+
+/*Set position of the first one*/
+.Lb1 {
+  position: fixed;
+  left: 40px;
+  top: 428px;
+}
+
+/*Set position of the first one*/
+.Lb2 {
+  position: fixed;
+  left: 241px;
+  top: 428px;
+}
